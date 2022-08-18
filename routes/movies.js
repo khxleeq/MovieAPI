@@ -2,6 +2,10 @@ const router = require('express').Router();
 
 const Movie = require('../db');
 
+router.get('/hello', (req, res, next) => {
+  res.send("Hello, World!")
+});
+
 router.post('/createMovie', (req, res, next) => {
   console.log('BODY:', req.body);
   if (!req.body || Object.keys(req.body).length < 1) return next({ status: 400, message: 'No body' });
