@@ -17,9 +17,8 @@ it("should not equal 2", () => {
 });
 
 
-// Main
 
-// Calculate the reverse factorial of bigNum
+
 const factorial = (bigNum) => {
     let divider = 2;
     let result = bigNum;
@@ -37,7 +36,6 @@ const factorial = (bigNum) => {
 
 };
 
-// Calculate the ordinal positions of all numbers up to and including maxNum
 const calcPlaces = (maxNum) => {
 
     let places = [];
