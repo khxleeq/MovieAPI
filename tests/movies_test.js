@@ -61,7 +61,7 @@ describe('CRUD Testing', () => {
   });
 
   it('should delete a movie', (done) => {
-    chai.request(server).delete(`/removeMovie/${id}`).query({ name: 'Furious 11' }).end((err, res) => {
+    chai.request(server).delete(`/removeMovie/${id}`).end((err, res) => {
       expect(err).to.be.null;
       expect(res.status).to.equal(204);
       expect(res.body._id).to.not.be.null;
@@ -70,7 +70,7 @@ describe('CRUD Testing', () => {
   });
 
   it('should get all movies', (done) => {
-    chai.request(server).get('/getAllMovies').query({ name: 'Furious 11' }).end((err, res) => {
+    chai.request(server).get('/getAllMovies').end((err, res) => {
       expect(err).to.be.null;
       expect(res.status).to.equal(200);
       expect(res.body._id).to.not.be.null;
