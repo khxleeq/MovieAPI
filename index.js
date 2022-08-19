@@ -1,15 +1,15 @@
 const express = require('express');
 const app = express();
-PORT = 1998;
 const bodyParser = require('body-parser');
-const router = require('./routes/movies');
+const movieRoutes = require('./routes/movies');
 const Movie = require('./db');
 
 app.use(bodyParser.json());
 console.log(Movie);
-app.use(router);
+app.use(movieRoutes);
 
-app.listen(PORT, function(err){
-    if (err) console.log("Error in server setup")
-    console.log("Server listening on Port", PORT);
-})
+const server = app.listen(1998, () => {
+    console.log(`Server started on port ${server.address().port}`);
+  });
+  
+  module.exports = server;

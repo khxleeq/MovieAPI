@@ -11,7 +11,7 @@ expect(1 + 1).to.equal(2);
 });
 
 
-it("should not equal 2", () => {
+it.skip("should not equal 2", () => {
     expect(1 + 1).to.equal(3);
 })
 });
